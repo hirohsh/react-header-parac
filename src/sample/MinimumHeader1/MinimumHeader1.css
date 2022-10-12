@@ -1,0 +1,150 @@
+.menu-icon {
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.menu-icon:not(.menu-open):hover .menu-border:first-child {
+  transform: translateY(-2px);
+  transition: transform 0.5s;
+}
+
+.menu-icon:not(.menu-open):hover .menu-border:last-child {
+  transform: translateY(2px);
+  transition: transform 0.5s;
+}
+
+.menu-open .menu-border:first-child {
+  transform: rotate(20deg) translateY(7px);
+}
+
+.menu-open .menu-border:last-child {
+  transform: rotate(-20deg) translateY(-7px);
+}
+
+.menu-border {
+  width: 72px;
+  height: 3px;
+  background-color: black;
+  transition: transform 0.3s;
+}
+
+.menu-border:first-child {
+  margin-bottom: 10px;
+}
+
+.menu-wrapper:not(.menu-open) {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.menu-wrapper:not(.menu-open) .menu-link {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 64px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: azure;
+  background-color: #ffc000;
+}
+
+.menu-box {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  padding-left: 64px;
+  transform: translate(-8px, -40px);
+  box-sizing: content-box;
+}
+
+.menu-link-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 640px;
+}
+
+.menu-link:nth-child(odd) {
+  width: 280px;
+}
+
+.menu-link:nth-child(2n) {
+  flex-grow: 1;
+}
+
+.menu-link {
+  flex-shrink: 0;
+  display: block;
+  padding: 16px 0;
+  font-size: 55px;
+  font-family: Helvetica Neue, Helvetica, Arial, serif;
+  margin: 0;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.menu-link:nth-child(1) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 20ms;
+}
+
+.menu-link:nth-child(2) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 80ms;
+}
+
+.menu-link:nth-child(3) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 120ms;
+}
+
+.menu-link:nth-child(4) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 150ms;
+}
+
+.menu-link:nth-child(5) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 180ms;
+}
+
+.menu-link:nth-child(6) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 210ms;
+}
+
+.menu-link:nth-child(7) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 240ms;
+}
+
+.menu-link a {
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 0;
+  transition: opacity 0.3s;
+}
+
+.menu-link a:hover {
+  opacity: 0.6;
+}
